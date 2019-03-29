@@ -1,0 +1,136 @@
+body{
+  margin: 0;
+  /* font-family: 'Courier New', Courier, monospace; */
+  overflow-wrap: break-word;
+}
+header{
+  background-color: #000;
+}
+a{
+  text-decoration: none;
+  color: #04a;
+}
+#home{
+  color: #f00;
+  border-bottom: 2px solid #f00;
+}
+.background{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+#contact{
+  margin: 0 auto;
+  width: 90vw;
+  background-color: #ccc;
+}
+.btn{
+  margin: 5px 0;
+  width: 90px;
+  padding: 5vw;
+  text-align: center;
+  font-size: calc(1vw + 10px);
+  color: #fff;
+  border-radius: 10px;
+  background-color: #555;
+}
+#contact h1{
+  text-align: center;
+}
+#btn-box{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 20px 0;
+  margin: 20px auto;
+}
+.phone-btn{
+  background-color: #00a;
+}
+.whatsapp-btn{
+  background-color: #061;
+}
+.text{
+  margin: 0 auto;
+  width: 90%;
+  font-size: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.grid{
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.grid li{
+  height: 150px;
+  padding: 5px;
+  background-clip: content-box;
+  background-size: cover;
+  background-position: center;
+}
+.grid .small{
+  flex-basis: 30%;
+}
+.grid .large{
+  flex-basis: 60%;
+}
+.lable{
+  font-size: calc(3vw + 20px);
+}
+#yoly{
+  margin: 0 auto;
+  width: 40%;
+}
+.other-instructors{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.instructor{
+  width: 30%;
+  text-align: center;
+  font-weight: bold;
+}
+.instructor img{
+  display: block;
+  width: 100%;
+  border-radius: 50%;
+}
+@media only screen and (min-device-width: 8in){
+  .background{
+    width: 70%;
+  }
+  header{
+    margin-top: 0;
+    min-height: 89vh;
+  }
+  .break{
+    display: inline;
+  }
+  .btn{
+    width: 150px;
+    padding: 30px;
+  }
+  .grid li{
+    height: 300px;
+  }
+  .text{
+    font-size: 30px;
+  }
+  .instructor{
+    margin: 50px calc(17vw - 50px);
+    width: 20%;
+    font-size: 30px;
+  }
+}
+@media only screen and (max-device-width: 2.1in){
+  .grid{
+    flex-direction: column;
+  }
+  .lable{
+    font-size: 13vw;
+  }
+}

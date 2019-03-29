@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f00"/>
+    <title>Wild West Mambo</title>
+    <meta name="description", content="Academia de baile en Mayaguez Puerto Rico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image/x-icon" href="images\logo.ico"/>
+    <link rel="stylesheet" href="./css/landing.css">
+    <link rel="stylesheet" href="/css/navbar/navbar-min_8in.css" media="(min-device-width: 8in)">
+    <link rel="stylesheet" href="/css/navbar/navbar-max_8in.css" media="(max-device-width: 8in)">
+  </head>
+  <body>
+    <% include partials/navbar %>
+    <header>
+      <img class="background" src="/images/wild-r-pr-s.png", alt="background">
+    </header>
+
+    <section id="contact">
+      <h1>Contact us at <p class="break"><%= phoneNumber %></p> <p class="break">or</p></h1>
+      <div id="btn-box"><a 
+             class="btn whatsapp-btn" 
+             href="https://api.whatsapp.com/send?phone=1<%= phoneNumber %>" 
+             rel="noreferrer"
+             target="_blank">
+             WhatsApp
+          </a>
+          <a class="btn phone-btn" href="tel:+1<%= phoneNumber %>" rel="noreferrer">Call</a>
+          
+      </div>
+    </section>
+
+    <section>
+      <ul class="grid">
+       <li class="small" style="background-image: url('/images/graduacion.png');"></li>
+       <li class="large" style="background-image: url('/images/grupo.jpg');"></li>
+       <li class="large" style="background-image: url('/images/entrenamiento.jpeg');"></li>
+       <li class="small" style="background-image: url('/images/panama.jpg');"></li>
+     </ul>
+    </section>
+    <section>
+      <div class="text">
+        <p>
+          La mejor academia de baile en el oeste de Puerto Rico. Aprende a bailar
+          Salsa, Bachata, Chachacha, Pachanga, Tiempo musical y mucho mas con los
+          mejores instructores profecionales.
+        </p>
+      </div>
+    </section>
+    <section>
+      <h1 class="lable">Instructores</h1>
+      <div class="instructors">
+        <div>
+            <div id="yoly" class="instructor">
+                <img src="/images/yoly.jpg" alt="Yolanda Soto">
+                <span>Yolanda Soto</span>
+            </div>
+        </div>
+        <div class="other-instructors">
+          <div class="instructor">
+            <img src="/images/norma.jpg" alt="Norma Rivera">
+            <span>Norma Rivera</span>
+          </div>
+          <div class="instructor">
+            <img src="https://farm8.staticflickr.com/7457/13891608232_22e746c944.jpg" alt="Jose Reyes">
+            <span>Jose Reyes</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <% include partials/footer %>
+  </body>
+</html>

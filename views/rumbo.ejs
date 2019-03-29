@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#f00"/>
+    <title>Wild West Mambo Rumbo a Colombia</title>
+    <meta name="description", content="Academia de baile en Mayaguez Puerto Rico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image/x-icon" href="images\logo.ico"/>
+    <link rel="stylesheet" href="/css/navbar/navbar-min_8in.css" media="(min-device-width: 8in)">
+    <link rel="stylesheet" href="/css/navbar/navbar-max_8in.css" media="(max-device-width: 8in)">
+    <link rel="stylesheet" href="/css/rumbo.css">
+</head>
+<body>
+    <% include partials/navbar %>
+    <header>
+        <h1>Rumbo a Colombia</h1>
+        <img src="/images/airplane-sunset-c.jpg" alt="background image of grup">
+    </header>
+    <section>
+        <video src="/vids/grupoproject.mp4" controls></video>
+    </section>
+    <section>
+        <p class="text"></p>
+    </section>
+    <section>
+        <ul class="grid">
+            <li class="small" style="background-image: url('/images/grupo.jpg');"></li>
+            <li class="large" style="background-image: url('/images/panama.jpg');"></li>
+            <li class="large" style="background-image: url('/images/graduacion.png');"></li>
+            <li class="small" style="background-image: url('/images/entrenamiento.jpeg');"></li>
+        </ul>
+    </section>
+    <section>
+        <p class="text"></p>
+    </section>
+    <section>
+        <h1>Competidores</h1>
+        <div class="competitors">
+            <svg width="50" height="50" viewBox="0 0 50 50">
+                <path fill="#ccc" d="M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z"></path>
+                <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="0.5s" repeatCount="indefinite"/>
+            </svg>
+        </div>
+    </section>
+    <% include partials/footer %>
+    <script src="/js/rumbo.js"></script>
+</body>
+</html>

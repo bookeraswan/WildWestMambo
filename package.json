@@ -1,0 +1,15 @@
+{
+  "name": "wildwestmambo",
+  "version": "1.0.0",
+  "description": "website for dance studio",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Booker Robinson",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}

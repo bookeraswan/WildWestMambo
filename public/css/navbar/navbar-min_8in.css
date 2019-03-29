@@ -1,0 +1,30 @@
+nav{
+    height: auto;
+}
+#collapse{
+    display: none;
+}
+.list{
+    position: static;
+    margin: 0;
+    width: auto;
+    height: 70px;
+    background-color: transparent;
+    transform: scaleX(1);
+}
+.list li{
+    margin: 0 calc(8vw - 40px);
+    display: inline-block;
+    color: #fff;
+}
+.nav-link{
+    display: inline-block;
+    margin-top: 9px;
+    padding: 10px 1vw;
+    text-decoration: none;
+    font-size: 25px;
+}
+.nav-link:hover{
+    color: #f00;
+    border-bottom: 2px solid #f00;
+}

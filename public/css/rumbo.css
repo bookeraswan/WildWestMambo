@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    overflow-wrap: break-word;
+}
+h1{
+    text-align: center;
+    font-size: 3em;
+}
+#rumbo{
+    color: #f00;
+    border-bottom: 2px solid #f00;
+}
+header{
+    min-height: 20vw;
+    background-color: #000;
+}
+header h1{
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    font-family: serif;
+    color: #fff;
+    font-size: 6vw;
+    z-index: 1;
+}
+header img{
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    }
+video{
+    margin: 4vw 0 0 4px;
+    width: 70%;
+    border: 2px solid #000;
+}
+.text{
+    margin: 4vw auto;
+    padding: 10px;
+    width: 90%;
+    background-color: #eee;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+.grid{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.grid li{
+    height: 150px;
+    padding: 5px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid .small{
+    flex-basis: 30%;
+}
+
+.grid .large{
+    flex-basis: 60%;
+}
+.competitors{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+svg{
+    position: absolute;
+    top: 50px;
+    margin: 0 auto;
+}
+.person{
+    width: calc(15vw + 50px);
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+.img-con{
+    margin: 0 auto;
+    width: 90%;
+}
+.img-con img{
+    width: 100%;
+    border-radius: 50%;
+}
+@media only screen and (min-device-width: 8in){
+    header img{
+        width: 100%;
+    }
+    header h1{
+        font-size: 60px;
+    }
+    .grid li{
+        height: 350px;
+    }
+}
+@media only screen and (max-device-width: 5in){
+    video{
+        margin-left: 0; 
+        width: calc(100% - 4px);
+    }
+}
+@media only screen and (max-device-width: 3.23in){
+    h1{
+        font-size: calc(8vw + 10px);
+    }
+    .person{
+        width: calc(15vw + 40px);
+        font-size: 100%;
+    }
+}
+@media only screen and (max-device-width: 2.1in){
+    header h1{
+        font-size: 10vw;
+    }
+    .grid{
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#f00"/>
+    <title>Clases de Wild West Mambo</title>
+    <meta name="description", content="Academia de baile en Mayaguez Puerto Rico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="shortcut icon" type="image/x-icon" href="images\logo.ico"/>
+    <link rel="stylesheet" href="/css/navbar/navbar-min_8in.css" media="(min-device-width: 8in)">
+    <link rel="stylesheet" href="/css/navbar/navbar-max_8in.css" media="(max-device-width: 8in)">
+    <link rel="stylesheet" href="/css/clases.css">
+</head>
+<body>
+    <% include partials/navbar %>
+    <header>
+        <h1>Cursos de Wild West Mambo</h1>
+        <h1>Comienzo cursos cortos de 6 semanas</h1>
+        <h1>
+            Lugar Academia Danzas y Bellas Artes en lo bajos antiguo casino de
+            Mayaguez pueblo.
+        </h1>
+        <h1>Costo total curso 6 semanas $60.00. Pagas $30.00 para empezar y $30.00 a la tercera clase.</h1>
+    </header>
+    <section class="courses">
+        <% for(var i = 0; i < clases.length; i++){ %>
+            <div class="course">
+                <p class="title"><%- clases[i].title %></p>
+                <% if(clases[i].desc){ %>
+                    <p class="desc"><%- clases[i].desc %></p>
+                <% } %>
+                <p class="info-blocks"><%- clases[i].starts %></p>
+                <p class="info-blocks"><em><%- clases[i].time %></em></p>
+                <p><strong><%- clases[i].mof %> <em><%= clases[i].instructor %></em></strong></p>
+            </div>
+        <% } %>
+    </section>
+    <% include partials/footer %>
+</body>
+</html>
