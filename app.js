@@ -7,7 +7,7 @@ var clases = [
         desc: "(guajira)",
         starts: "Lunes 8 Abril",
         time: "6:00pm-7:00pm",
-        mof: "instructora",
+        mof: "instructora:",
         instructor: "Norma Rivera"
     },
     {
@@ -15,7 +15,7 @@ var clases = [
         starts: "Lunes 8 Abril",
         time: "7:00pm-8:00pm",
         mof: "instructora:",
-        instructor: "Yolanda Soto"
+        instructor: "Norma Rivera"
     },
     {
         title: "Timming",
@@ -23,7 +23,7 @@ var clases = [
         starts: "Lunes 8 Abril",
         time: "8:00pm-9:00pm",
         mof: "instructora:",
-        instructor: "Yolanda Soto"
+        instructor: "Norma Rivera"
     },
     {
         title: "Salsa Basica 1",
@@ -40,7 +40,7 @@ var clases = [
         mof: "instructora:",
         instructor: "Yolanda Soto"
     }
-]
+];
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
