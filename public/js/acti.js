@@ -15,7 +15,7 @@ activityTypes.forEach(acti => {
         loader.style.opacity = 1;
         Ajax({
             method: "GET",
-            url: `/json/${type}.json`
+            url: `/api/actividades/${type}`
         })
         .then(function(res){
             loader.style.opacity = 0;

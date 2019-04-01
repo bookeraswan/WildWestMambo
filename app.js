@@ -1,5 +1,14 @@
 var express = require("express");
 var app = express();
+const fs = require('fs');
+
+function readAndSend(res, file){
+    fs.readFile(__dirname + `/json/${file}.json`, (err, data) => {
+        if (err) throw err;
+        var parsedData = JSON.parse(data);
+        res.json(parsedData);
+    });
+}
 
 var clases = [
     {
@@ -56,6 +65,10 @@ app.get("/clases", function(req, res) {
 app.get("/actividades", function(req, res) {
     res.render("actividades");
 });
+
+app.get("/api/actividades/:file", (req, res) =>{
+    readAndSend(res, req.params.file);
+})
 
 app.get("/rumbo_a_colombia", function(req, res) {
     res.render("rumbo");
