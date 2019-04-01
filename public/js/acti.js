@@ -2,7 +2,7 @@ var S = select => document.querySelector(select);
 var C = elm => document.createElement(elm);
 
 var activityTypes = document.querySelectorAll("#event-nav li");
-var loader = S("svg");
+var loader = S(".loader");
 
 activityTypes.forEach(acti => {
     acti.onclick = function(){
