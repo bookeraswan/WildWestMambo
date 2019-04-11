@@ -114,7 +114,7 @@ svg{
     }
     .person{
         width: calc(15vw + 40px);
-        font-size: 100%;
+        font-size: 80%;
     }
 }
 @media only screen and (max-device-width: 2.1in){
