@@ -1,16 +1,8 @@
 [
     {
-        "name": "Unknown",
-        "date": "",
-        "image": "https://as2.ftcdn.net/jpg/00/19/50/01/500_F_19500117_emS7V1tMiTHOOIe9Znhu9VUIuy7xuZyP.jpg",
-        "Facebook_link": "https://home.facebook.com",
-        "desc": ""
-    },
-    {
-        "name": "Unknown",
-        "date": "",
-        "image": "https://as2.ftcdn.net/jpg/00/19/50/01/500_F_19500117_emS7V1tMiTHOOIe9Znhu9VUIuy7xuZyP.jpg",
-        "Facebook_link": "https://home.facebook.com",
-        "desc": ""
+        "name": "Salsa Open",
+        "date": "Sabado 1 de junio 2019",
+        "image": "/images/salsa-open.jpg",
+        "desc": "Ponce"
     }
 ]
