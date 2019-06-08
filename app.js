@@ -1,6 +1,6 @@
-import express, { static } from "express";
-import { readFile } from 'fs';
-const app = express();
+const   express = require("express"),
+        app = express(),
+        readFile = require('fs').readFile;
 
 function readJSON(file, callback){
     readFile(__dirname + `/json/${file}.json`, (err, data) => {
@@ -8,10 +8,10 @@ function readJSON(file, callback){
         var parsedData = JSON.parse(data);
         callback(parsedData)
     });
-}
+} 
 
 app.set("view engine", "ejs");
-app.use(static("public"));
+app.use(express.static("public"));
 
 
 app.get("/", function(req, res) {
