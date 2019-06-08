@@ -28,7 +28,38 @@ header img{
     display: block;
     margin: 0 auto;
     width: 100%;
-    }
+}
+
+#countdown{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: calc(10px + 2vw)
+}
+
+#countdown span{
+    display: block;
+    width: calc(30px + 5vw);
+    text-align: center;
+}
+
+#days{
+    animation: countDownColors 5s 1500ms linear infinite;
+}
+
+#hours{
+    animation: countDownColors 5s 1000ms linear infinite;
+}
+
+#minutes{
+    animation: countDownColors 5s 500ms linear infinite;
+}
+
+#seconds{
+    animation: countDownColors 5s linear infinite;
+}
+
 video{
     margin: 4vw 0 0 4px;
     width: 70%;
@@ -123,5 +154,29 @@ svg{
     }
     .grid{
         flex-direction: column;
+    }
+}
+
+@keyframes  countDownColors {
+    0%{
+        color: rgb(255, 255, 0)
+    }
+    15%{
+        color: rgb(0, 255, 0)
+    }
+    30%{
+        color: rgb(0, 247, 255)
+    }
+    45%{
+        color: rgb(64, 99, 255)
+    }
+    60%{
+        color: rgb(255, 0, 242)
+    }
+    75%{
+        color: rgb(255, 0, 157)
+    }
+    90%{
+        color: #f00
     }
 }

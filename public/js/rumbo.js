@@ -16,6 +16,7 @@ function main(){
     .then(r => {
         S("svg").style.opacity = 0;
     });
+    setInterval(countDown, 500)
 }
 
 function renderCompetidores(people){
@@ -36,6 +37,55 @@ function renderCompetidores(people){
     });
 }
 
+function countDown(){
+    var trip = {
+        day: 8,
+        hour: 22,
+        minute: 55,
+        second: 0
+    }
+    var date = new Date();
+    var day = Number(date.toDateString().substring(8, 10));
+    var month = date.toDateString().substring(4, 7);
+    var hour = Number(date.toTimeString().substr(0, 2));
+    var minute = Number(date.toTimeString().substr(3, 2));
+    var second = Number(date.toTimeString().substr(6, 2));
+    var daysLeft = trip.day - day
+    var hoursLeft = trip.hour - hour
+    var minutesLeft = trip.minute - minute
+    var secondsLeft =  trip.second - second
+    if(month == "Jun"){
+        daysLeft = daysLeft + 30
+    }
+    if(secondsLeft < 0){
+        minutesLeft--
+        secondsLeft = 60 + secondsLeft
+    }
+    if(minutesLeft < 0){
+        hoursLeft--
+        minutesLeft = 60 + minutesLeft
+    }
+    if(hoursLeft < 0){
+        daysLeft--
+        hoursLeft = 24 + hoursLeft
+    }
+
+    if(daysLeft < 0){
+        daysLeft = "00"
+        hoursLeft = "00"
+        minutesLeft = "00"
+        secondsLeft =  "00"
+        S("#countdown").style.color = "#f00"
+    }
+    S("#days").textContent = `${daysLeft}d`
+    S("#hours").textContent = `${hoursLeft}h`
+    S("#minutes").textContent = `${minutesLeft}m`
+    S("#seconds").textContent = `${secondsLeft}s`
+}
+
+function countDownColors(days, hours, minutes, seconds){
+
+}
 
 function Ajax(obj){
     var XHR = new XMLHttpRequest();
@@ -56,3 +106,17 @@ function Ajax(obj){
     XHR.send(obj.body);
     return promise;
 }
+
+/*
+var daysLeft = trip.day - day
+        if(month == "Jun"){
+            daysLeft = daysLeft + 30
+        }
+        var hoursLeft = trip.hour - hour
+        var minutesLeft = trip.minute - minute
+        var secondsLeft =  trip.second - second
+        if(minutesLeft < 0){
+            hoursLeft--
+            minutesLeft = minutesLeft*-1
+        }
+*/
