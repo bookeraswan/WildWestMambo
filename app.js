@@ -1,81 +1,43 @@
-var express = require("express");
-var app = express();
-const fs = require('fs');
+import express, { static } from "express";
+import { readFile } from 'fs';
+const app = express();
 
-function readAndSend(res, file){
-    fs.readFile(__dirname + `/json/${file}.json`, (err, data) => {
+function readJSON(file, callback){
+    readFile(__dirname + `/json/${file}.json`, (err, data) => {
         if (err) throw err;
         var parsedData = JSON.parse(data);
-        res.json(parsedData);
+        callback(parsedData)
     });
 }
 
-var clases = [
-    {
-        title: "Chachacha",
-        desc: "(guajira)",
-        starts: "Lunes 8 Abril",
-        time: "6:00pm-7:00pm",
-        mof: "instructora:",
-        instructor: "Norma Rivera"
-    },
-    {
-        title: "Pachanga",
-        starts: "Lunes 8 Abril",
-        time: "7:00pm-8:00pm",
-        mof: "instructora:",
-        instructor: "Norma Rivera"
-    },
-    {
-        title: "Timming",
-        desc: "(Musicalidad)",
-        starts: "Lunes 8 Abril",
-        time: "8:00pm-9:00pm",
-        mof: "instructora:",
-        instructor: "Norma Rivera"
-    },
-    {
-        title: "Salsa Basica 1",
-        starts: "Miercoles 10 de Abril",
-        time: "6:00pm-7:30pm",
-        mof: "instructora:",
-        instructor: "Yolanda Soto"
-    },
-    {
-        title: "Salsa Basica Intermedia",
-        desc: "(incluye salsa libre y parejas, chachacha guajira basica y bachata basica)",
-        starts: "Miercoles 10 de Abril",
-        time: "7:30pm-9:00pm",
-        mof: "instructora:",
-        instructor: "Yolanda Soto"
-    }
-];
-
 app.set("view engine", "ejs");
-app.use(express.static("public"));
+app.use(static("public"));
+
 
 app.get("/", function(req, res) {
     res.render("home", {phoneNumber: "787-951-6794"});
 });
 
 app.get("/clases", function(req, res) {
-    res.render("clases", {clases: clases});
+    readJSON("classes", clases => {
+        res.render("clases", {clases: clases});
+    })
 });
 
-app.get("/actividades", function(req, res) {
-    res.render("actividades");
-});
+app.get("/actividades", (req, res) => 
+    res.render("actividades")
+);
 
 app.get("/api/actividades/:file", (req, res) =>{
-    readAndSend(res, req.params.file);
+    readJSON(req.params.file, data => res.json(data))
 })
 
-app.get("/rumbo_a_colombia", function(req, res) {
-    res.render("rumbo");
-});
+app.get("/rumbo_a_colombia", (req, res) =>
+    res.render("rumbo")
+);
 
-app.get("*", function (req, res) {
-    res.redirect("/");
-});
+app.get("*", (req, res) =>
+    res.redirect("/")
+);
 
 app.listen(process.env.PORT, process.env.IP, () => console.log("Wild West Mambo Server has started"));
