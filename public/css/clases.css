@@ -53,6 +53,20 @@ em{
     font-family: monospace;
 }
 
+.other_info{
+    padding: 30px;
+    background-color: #111;
+    color: #fff;
+    font-family: serif;
+    /* font-size: 20px; */
+}
+
+@media only screen and (max-device-width: 2.5in){
+    .title{
+        font-size: calc(9vw + 5px);
+    }
+}
+
 @media only screen and (max-device-width: 3.75in){
     .course{
         width: 95%;

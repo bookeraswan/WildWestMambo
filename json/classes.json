@@ -1,40 +1,58 @@
 [
     {
-        "title": "Chachacha",
-        "desc": "(guajira)",
-        "starts": "Lunes 8 Abril",
+        "title": "Advanzado",
+        "desc": "",
+        "starts": "Lunes 12 Agosto",
         "time": "6:00pm-7:00pm",
         "mof": "instructora:",
         "instructor": "Norma Rivera"
     },
     {
-        "title": "Pachanga",
-        "starts": "Lunes 8 Abril",
+        "title": "Advanzado Profesional",
+        "desc": "",
+        "starts": "Lunes 12 Agosto",
         "time": "7:00pm-8:00pm",
         "mof": "instructora:",
         "instructor": "Norma Rivera"
     },
     {
         "title": "Timming",
-        "desc": "(Musicalidad)",
-        "starts": "Lunes 8 Abril",
+        "desc": "",
+        "starts": "Lunes 12 Agosto",
         "time": "8:00pm-9:00pm",
         "mof": "instructora:",
         "instructor": "Norma Rivera"
     },
     {
-        "title": "Salsa Basica 1",
-        "starts": "Miercoles 10 de Abril",
-        "time": "6:00pm-7:30pm",
+        "title": "Salsa Básica",
+        "desc": "(niños y niñas de 6-12)",
+        "starts": "13 Agosto <br> Martes y Miercoles",
+        "time": "6:00pm-7:00pm",
         "mof": "instructora:",
         "instructor": "Yolanda Soto"
     },
     {
-        "title": "Salsa Basica Intermedia",
-        "desc": "(incluye salsa libre y parejas, chachacha guajira basica y bachata basica)",
-        "starts": "Miercoles 10 de Abril",
-        "time": "7:30pm-9:00pm",
+        "title": "Salsa Básica",
+        "desc": "(jóvenes y adultos)",
+        "starts": "13 Agosto <br> Martes y Miercoles",
+        "time": "7:00pm-8:00pm",
         "mof": "instructora:",
         "instructor": "Yolanda Soto"
+    },
+    {
+        "title": "Salsa Intermedio",
+        "desc": "Incluye salsa, chachacha y bachata",
+        "starts": "13 Agosto <br> Martes y Miercoles",
+        "time": "8:00pm-9:00pm",
+        "mof": "instructora:",
+        "instructor": "Yolanda Soto"
+    },
+    {
+        "title": "Entrenamiento para shows y competencias",
+        "desc": "(niños, jóvenes, adultos y masters) todas las categorias",
+        "starts": "Viernes 16 Agosto",
+        "time": "5:00pm-10:00pm",
+        "mof": " ",
+        "instructor": " "
     }
 ]
